@@ -1,0 +1,158 @@
+/*
+    https://hankchizljaw.com/wrote/a-modern-css-reset/
+    with modifications
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images and videos easier to work with */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Canvas */
+canvas {
+    display: block;
+    margin: 0;
+}
+
+/* Browser sync message */
+#__bs_notify__ {
+    display: block;
+    padding: 15px;
+    font-family: 'Andale Mono' !important;
+    position: fixed;
+    font-size: 11px !important;
+    z-index: 9999;
+    right: 0px;
+    top: 0px;
+    border-bottom-left-radius: 0px !important;
+    background-color :rgba(0,192,255,0.60) !important;
+    margin: 0px;
+    color: #00AFB3;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* App basics */
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+#artboard {
+    display: flex;
+}
+
+.tool {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+#select {
+    background-image: url(/images/select.svg);
+}
+
+#select.active {
+    background-image: url(/images/select-on.svg);
+}
+
+#text {
+    background-image: url(/images/text.svg);
+}
+
+#text.active {
+    background-image: url(/images/text-on.svg);
+}
+
+#rect {
+    background-image: url(/images/rect.svg);
+}
+
+#rect.active {
+    background-image: url(/images/rect-on.svg);
+}
